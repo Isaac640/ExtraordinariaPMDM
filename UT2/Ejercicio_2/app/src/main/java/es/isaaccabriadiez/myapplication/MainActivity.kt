@@ -9,10 +9,10 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     private val datos = linkedMapOf<String, Int>(
-        "Isaac" to
-                R.drawable.avatar3,
-        "María" to R.drawable.avatar1, "Rosa" to R.drawable.avatar2, "Pepe"
-                to R.drawable.avatar4
+        "Isaac" to R.drawable.avatar3,
+        "María" to R.drawable.avatar1,
+        "Rosa" to R.drawable.avatar2,
+        "Pepe" to R.drawable.avatar4
     )
 
     private var contador = 0
@@ -35,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         textView.text = texto
         imageView.setImageResource(datos[texto]!!)
 
+        if(contador == 3){
+            contador = 0
+        }
         Toast.makeText(this, "Has cambiado el valor a $texto", Toast.LENGTH_SHORT).show()
     }
 }
