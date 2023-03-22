@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="396dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/purple_200"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/botonToast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mostrar toast"
+            app:backgroundTint="@color/azul_marino" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="100sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/botonContar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="contar"
+            app:backgroundTint="@color/azul_marino" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/botonCE"
+                style="@style/BotonCalculadora"
+                android:text="CE" />
+            <Button
+                android:id="@+id/botonC"
+                style="@style/BotonCalculadora"
+                android:text="C" />
+            <Button
+                android:id="@+id/botonBorrar"
+                style="@style/BotonCalculadora"
+                android:layout_width="wrap_content"
+                android:text="borrar" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/boton7"
+                style="@style/BotonCalculadora"
+                android:text="7" />
+            <Button
+                android:id="@+id/boton8"
+                style="@style/BotonCalculadora"
+                android:text="8" />
+            <Button
+                android:id="@+id/boton9"
+                style="@style/BotonCalculadora"
+                android:text="9" />
+            <Button
+                android:id="@+id/botonMas"
+                style="@style/BotonCalculadora"
+                android:text="+" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/boton4"
+                style="@style/BotonCalculadora"
+                android:text="4" />
+            <Button
+                android:id="@+id/boton5"
+                style="@style/BotonCalculadora"
+                android:text="5" />
+            <Button
+                android:id="@+id/boton6"
+                style="@style/BotonCalculadora"
+                android:text="6" />
+            <Button
+                android:id="@+id/botonMenos"
+                style="@style/BotonCalculadora"
+                android:text="-" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/boton1"
+                style="@style/BotonCalculadora"
+                android:text="1" />
+            <Button
+                android:id="@+id/boton2"
+                style="@style/BotonCalculadora"
+                android:text="2" />
+            <Button
+                android:id="@+id/boton3"
+                style="@style/BotonCalculadora"
+                android:text="3" />
+            <Button
+                android:id="@+id/botonMul"
+                style="@style/BotonCalculadora"
+                android:text="*" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/boton0"
+                style="@style/BotonCalculadora"
+                android:text="0" />
+            <Button
+                android:id="@+id/botonComa"
+                style="@style/BotonCalculadora"
+                android:text="." />
+            <Button
+                android:id="@+id/botonIgual"
+                style="@style/BotonCalculadora"
+                android:text="=" />
+            <Button
+                android:id="@+id/botonDiv"
+                style="@style/BotonCalculadora"
+                android:text="/" />
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
