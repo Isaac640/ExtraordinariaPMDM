@@ -16,8 +16,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25"
-        tools:srcCompat="@tools:sample/avatars[1]"
-        android:contentDescription="TODO" />
+        android:srcCompat="@tools:sample/avatars[1]"
+        tools:srcCompat="@tools:sample/avatars[1]"/>
 
     <TextView
         android:id="@+id/textView"
@@ -36,9 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
-        android:layout_marginBottom="240dp"
+        android:layout_marginBottom="4dp"
         android:text="Cambiar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
