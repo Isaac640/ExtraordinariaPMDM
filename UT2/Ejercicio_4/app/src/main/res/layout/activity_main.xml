@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿A que destino quiere ir?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <EditText
+        android:id="@+id/nombreYApellidos"
+        android:layout_width="356dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Nombre y Apellidos"/>
+
+    <EditText
+        android:id="@+id/presupuesto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreYApellidos"
+        android:hint="Presupuesto"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="268dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/opcion_peninsula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Costa Peninsular (600€)" />
+
+        <RadioButton
+            android:id="@+id/opcion_islas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Costa Insular (900€)" />
+
+        <RadioButton
+            android:id="@+id/opcion_interior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turismo de Interior (520€)" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="I.V.A."
+        app:layout_constraintBottom_toTopOf="@+id/botonMostrar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_IVA"
+        android:layout_width="47dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginBottom="12dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/botonMostrar"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/botonMostrar"
+        android:layout_width="380dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="Mostrar"
+        app:layout_constraintBottom_toTopOf="@+id/precio_final"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/precio_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="322dp"
+        android:layout_marginBottom="232dp"
+        android:text="Precio Final"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
