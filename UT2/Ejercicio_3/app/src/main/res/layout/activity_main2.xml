@@ -68,10 +68,12 @@
                 android:id="@+id/botonC"
                 style="@style/BotonCalculadora"
                 android:text="C" />
+
             <Button
                 android:id="@+id/botonBorrar"
                 style="@style/BotonCalculadora"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
+                android:layout_span="2"
                 android:text="borrar" />
         </TableRow>
 

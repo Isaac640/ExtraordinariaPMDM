@@ -1,30 +1,27 @@
 package es.isaaccabriadiez.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import es.isaaccabriadiez.myapplication.databinding.ActivityMain2Binding
 
 class MainActivity : AppCompatActivity() {
 
-    val botonContar = findViewById<Button>(R.id.botonContar)
-    var contador: Int = 0;
+    private lateinit var binding: ActivityMain2Binding
+    var contador: Int = 1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMain2Binding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         binding.botonContar.setOnClickListener {
-            contador++
+            val contador = contador++
             binding.textView.text = contador.toString()
+            Toast.makeText(this, "Se ha  pulsado el botón " +
+            "$contador veces", Toast.LENGTH_SHORT).show()
         }
 
-    fun contar(texto: String){
-        contador = contador+1
-        Toast.makeText(this, "Has pulsado el boton $texto", Toast.LENGTH_SHORT).show()
     }
-
-    fun contador
 }
 
