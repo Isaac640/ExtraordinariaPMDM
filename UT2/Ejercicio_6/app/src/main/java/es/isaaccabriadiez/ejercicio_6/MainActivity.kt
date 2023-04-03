@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewAnimales)
+        recyclerView = findViewById<RecyclerView>(R.id.recyclerViewAnimales)
         val botonAnadir = findViewById<FloatingActionButton>(R.id.boton_aniadir)
 
         //Establecer el adapter y layout
@@ -26,14 +26,12 @@ class MainActivity : AppCompatActivity() {
 
         //Separador en el recyclerView
         recyclerView.addItemDecoration(
-            DividerItemDecoration(
-                this,
-                DividerItemDecoration.VERTICAL
-            )
+            DividerItemDecoration(this,DividerItemDecoration.VERTICAL)
         )
+
         //Añade un animal al pulsarse
         botonAnadir.setOnClickListener {
-            (recyclerView.adapter as AnimalAdapter).addAnimal("Nuevo Animal")
+            dialogoNuevoAnimal()
         }
     }
 
