@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Usuarios/DAM206/Desktop/PMDM/EXTRAORDINARIA/ExtraordinariaPMDM/UT2/Ejercicio_6/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Usuarios/DAM206/Desktop/PMDM/EXTRAORDINARIA/ExtraordinariaPMDM/UT2/Ejercicio_6/app/src/main/res/layout/item_animal.xml" value="0.25" />
+        <entry key="..\:/Usuarios/DAM206/Desktop/PMDM/EXTRAORDINARIA/ExtraordinariaPMDM/UT2/Ejercicio_7/app/src/main/res/layout/activity_main.xml" value="0.30572916666666666" />
+        <entry key="..\:/Usuarios/DAM206/Desktop/PMDM/EXTRAORDINARIA/ExtraordinariaPMDM/UT2/Ejercicio_7/app/src/main/res/layout/item_animal.xml" value="0.5" />
+        <entry key="..\:/Usuarios/DAM206/Desktop/PMDM/EXTRAORDINARIA/ExtraordinariaPMDM/UT2/Ejercicio_8/app/src/main/res/layout/activity_detalle_animal.xml" value="0.33" />
+        <entry key="..\:/Usuarios/DAM206/Desktop/PMDM/EXTRAORDINARIA/ExtraordinariaPMDM/UT2/Ejercicio_8/app/src/main/res/layout/activity_main.xml" value="0.17806484295845998" />
+        <entry key="..\:/Usuarios/DAM206/Desktop/PMDM/EXTRAORDINARIA/ExtraordinariaPMDM/UT2/Ejercicio_8/app/src/main/res/layout/item_animal.xml" value="0.17806484295845998" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
