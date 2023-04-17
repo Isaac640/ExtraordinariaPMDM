@@ -2,65 +2,82 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".FragmentPersonas">
+    tools:context=".Fragments.FragmentPersonas">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-        <TextView
-            android:id="@+id/textViewAdultos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="50dp"
-            android:text="Adultos"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            app:layout_constraintBottom_toBottomOf="@+id/numberPickerAdultos"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/numberPickerAdultos" />
-        <NumberPicker
-            android:id="@+id/numberPickerAdultos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <TextView
-            android:id="@+id/textViewNinos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="50dp"
-            android:text="Niños"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            app:layout_constraintBottom_toBottomOf="@+id/numberPickerNinos"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/numberPickerNinos" />
-        <NumberPicker
-            android:id="@+id/numberPickerNinos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/numberPickerAdultos" />
-        <TextView
-            android:id="@+id/total"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Precio total"
-            android:textAppearance="?attr/textAppearanceHeadline6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/numberPickerNinos" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <Button
-            android:id="@+id/botonSiguiente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Siguiente"
-            app:layout_constraintTop_toBottomOf="@+id/total"
-            tools:layout_editor_absoluteX="16dp" />
+            <NumberPicker
+                android:id="@+id/numberPickerNinos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="68dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberPickerAdultos" />
+
+            <TextView
+                android:id="@+id/textViewNinos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:paddingHorizontal="50dp"
+                android:text="Niños"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                app:layout_constraintBottom_toBottomOf="@+id/numberPickerNinos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/numberPickerNinos"
+                app:layout_constraintVertical_bias="0.403" />
+
+            <TextView
+                android:id="@+id/textViewAdultos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:paddingHorizontal="50dp"
+                android:text="Adultos"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                app:layout_constraintBottom_toBottomOf="@+id/numberPickerAdultos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/numberPickerAdultos"
+                app:layout_constraintVertical_bias="0.41" />
+
+            <NumberPicker
+                android:id="@+id/numberPickerAdultos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="68dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="152dp"
+                android:layout_marginEnd="32dp"
+                android:text="Total: "
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberPickerNinos" />
+
+            <Button
+                android:id="@+id/botonSiguiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text="Siguiente"
+                app:layout_constraintTop_toBottomOf="@+id/total"
+                tools:layout_editor_absoluteX="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>
