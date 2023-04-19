@@ -6,42 +6,41 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.navigation.findNavController
 import es.isaaccabriadiez.ejercicio_6.R
-import es.isaaccabriadiez.ejercicio_6.databinding.FragmentFechaBinding
 import es.isaaccabriadiez.ejercicio_6.databinding.FragmentPersonasBinding
-import java.util.Calendar
+import es.isaaccabriadiez.ejercicio_6.databinding.FragmentPersonasBinding.inflate
 
-class FragmentFecha : Fragment() {
-
-    private lateinit var binding: FragmentFechaBinding
+class FragmentPersonas : Fragment() {
+    private lateinit var binding: FragmentPersonasBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentFechaBinding.inflate(inflater, container, false)
+        binding = inflate(inflater, container, false)
         return binding.root;
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val hoy = Calendar.getInstance()
-        binding.datePicker.init(
-            hoy.get(Calendar.YEAR), hoy.get(Calendar.MONTH),
-            hoy.get(Calendar.DAY_OF_MONTH)
-        ) { view, year, month, day ->
-            val mensaje = "Fecha: $day/${month + 1}/$year"
-            Toast.makeText(context, mensaje, Toast.LENGTH_SHORT).show()
+        binding.numberPickerAdultos.apply {
+            minValue = 0
+            maxValue = 5
+            value = 1
+            wrapSelectorWheel = false
+        }
+        binding.numberPickerNinos.apply {
+            minValue = 0
+            maxValue = 5
+            value = 0
+            wrapSelectorWheel = false
         }
 
         val botonSiguiente = view.findViewById<Button>(R.id.botonSiguiente)
         botonSiguiente.setOnClickListener {
-            view.findNavController().navigate(R.id.fragmentResumen)
+            view.findNavController().navigate(R.id.fragmentFecha)
         }
     }
-
-
 }
