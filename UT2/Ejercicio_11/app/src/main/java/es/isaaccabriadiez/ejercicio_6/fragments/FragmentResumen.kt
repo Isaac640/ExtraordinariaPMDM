@@ -1,18 +1,20 @@
-package es.isaaccabriadiez.ejercicio_6.Fragments
+package es.isaaccabriadiez.ejercicio_6.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.findNavController
+import android.widget.Toast
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import es.isaaccabriadiez.ejercicio_6.modelo.ReservaZooViewModel
 import es.isaaccabriadiez.ejercicio_6.R
-import es.isaaccabriadiez.ejercicio_6.databinding.FragmentPersonasBinding
 import es.isaaccabriadiez.ejercicio_6.databinding.FragmentResumenBinding
 
 class FragmentResumen : Fragment() {
     private lateinit var binding: FragmentResumenBinding
+    private val viewModelCompartido: ReservaZooViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,11 +25,12 @@ class FragmentResumen : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val botonReservar = view.findViewById<Button>(R.id.botonReservar)
-        botonReservar.setOnClickListener {
-            view.findNavController().navigate(R.id.fragmentInicio)
+        binding.viewModel = viewModelCompartido
+        //No hace falta ya que no se modifica ningún dato en la UI
+        //binding.lifecycleOwner = viewLifecycleOwner
+        binding.botonReservar.setOnClickListener{
+            Toast.makeText(context, "Se ha realizado la reserva", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.fragmentInicio)
         }
     }
 }

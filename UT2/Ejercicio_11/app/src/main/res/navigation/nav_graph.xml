@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentInicio"
-        android:name="es.isaaccabriadiez.ejercicio_6.Fragments.FragmentInicio"
+        android:name="es.isaaccabriadiez.ejercicio_6.fragments.FragmentInicio"
         android:label="Inicio"
         tools:layout="@layout/fragment_inicio">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentPersonas"
-        android:name="es.isaaccabriadiez.ejercicio_6.Fragments.FragmentPersonas"
+        android:name="es.isaaccabriadiez.ejercicio_6.fragments.FragmentPersonas"
         android:label="Personas"
         tools:layout="@layout/fragment_personas">
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentFecha"
-        android:name="es.isaaccabriadiez.ejercicio_6.Fragments.FragmentFecha"
+        android:name="es.isaaccabriadiez.ejercicio_6.fragments.FragmentFecha"
         android:label="Fecha"
         tools:layout="@layout/fragment_fecha">
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentResumen"
-        android:name="es.isaaccabriadiez.ejercicio_6.Fragments.FragmentResumen"
+        android:name="es.isaaccabriadiez.ejercicio_6.fragments.FragmentResumen"
         android:label="Resumen"
         tools:layout="@layout/fragment_resumen">
         <action

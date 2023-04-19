@@ -2,7 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Fragments.FragmentPersonas">
+    tools:context=".fragments.FragmentPersonas">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="es.isaaccabriadiez.ejercicio_6.modelo.ReservaZooViewModel" />
+    </data>
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -64,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
                 android:layout_marginEnd="52dp"
-                android:text="Total: "
+                android:text="@{@string/precio_total(viewModel.precio)}"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/numberPickerNinos" />
